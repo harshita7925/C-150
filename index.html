@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    </head>
+
+    <body>
+        <a-scene background="color:skyblue">
+        <a-camera position="0 8 20"></a-camera>
+        <a-assets>
+            <a-asset-item
+                id="table"
+                src="./3D MODELS/OBJ/tinker.obj">
+            </a-asset-item>
+            <a-asset-item
+                id="coffee"
+                src="./3D MODELS/OBJ/obj.mtl">
+            </a-asset-item>
+        </a-assets>
+        <a-circle
+           id="floor"
+           position="-0.5 -0.7 -25"
+           radius="100"
+           rotation="90 0 0"
+           shadow="receive:true"
+           color="yellow">
+        </a-circle>
+        <a-entity
+           obj-model="obj:#table;mtl:#coffee"
+           position="5 0 0"
+           rotation="-90 -50 0"
+           scale="0.1 0.1 0.1">
+        </a-entity>
+      </a-scene>
+    </body>
+</html>
